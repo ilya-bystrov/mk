@@ -4,12 +4,19 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
+hello_msg='Hello, World!'
+
 hello() {
-  echo 'Hello, World!'
+  echo $hello_msg
+}
+
+ignored_fuction ()  {
+  # this function name will be ignored by autocompletion because of space between function name and curly brackets
+  echo 'bye-bye.'
 }
 
 bye() {
-  echo 'bye-bye.'
+  ignored_fuction
 }
 
 while [ $# != 0 ]; do
