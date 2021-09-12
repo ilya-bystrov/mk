@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cat completions/makeit_alias >> ~/.bash_completion
+cat completions/makeit_completions >> ~/.bash_completion

@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -o pipefail
+set -o nounset
+
+container_name='somecontainer'
+image_name='someimage'
+
+build() {
+
+  docker build -t $image_name:latest -<<EOF
+
+    FROM busybox
+    RUN echo "hello world"
+EOF
+}
+
+start() {
+	docker start $container_name
+}
+
+run() {
+
+    docker run \
+    --name $container_name \
+    -it \
+    $image_name
+}
+
+rm() {
+  docker rm -v $container_name
+}
+
+rmi() {
+  docker rmi $image_name
+}
+
+while [ $# != 0 ]; do
+  if [ "$(type -t $1)" == 'function' ]; then
+    $1 
+  else
+    exit 1
+  fi 
+  shift
+done
