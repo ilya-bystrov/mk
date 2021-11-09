@@ -16,7 +16,7 @@ Getting Started
 Put `makeit` file in the directory, `makeit` should be executable, completion support is installed (otherwise 
 use `./makeit`).
 
-Completion support:
+Bash completion support:
 
 .. code-block:: bash
 
@@ -44,14 +44,6 @@ Creating `makeit` file
 * For every new `makeit` file you **must copy** bottom lines of `makeit` file (`while` loop),
 * Also I suggest to use `/usr/bin/env bash` shebang and `errexit`, `pipefail`, `nounset` bash options but it's 
   not required.
-
-Completion installation
-=======================
-
-* Alias and completion function together allow to type `makeit<space><tab>` and get completion list (similar 
-  to `make<space><tab>`)
-* I suggest to put configuration (alias and completion functions) into user specific `~/.bash_completion` file 
-  using `install` script.
 
 Example
 =======
