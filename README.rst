@@ -15,7 +15,16 @@ Getting Started
 
 Put `makeit` file in the directory, `makeit` should be executable, completion support is installed (otherwise 
 use `./makeit`).
-Type in bash shell:
+
+Completion support:
+
+.. code-block:: bash
+
+  $ wget https://raw.githubusercontent.com/ilya-bystrov/makeit/master/completions/makeit_completions -O - >> ~/.bash_completion
+  $ wget https://raw.githubusercontent.com/ilya-bystrov/makeit/master/completions/makeit_alias -O - >> ~/.bash_completion
+
+
+Demo: 
 
 .. code-block:: bash
 
