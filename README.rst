@@ -14,7 +14,7 @@ Getting Started
 ===============
 
 Put `makeit` file in the directory, `makeit` should be executable, completion support is installed (otherwise 
-use `./makeit`).
+use `./makeit` instead of `makeit`).
 
 Bash completion support:
 
