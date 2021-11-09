@@ -10,8 +10,8 @@ Bash file for defining multiple actions using bash-functions and launching them 
    <a href="https://asciinema.org/a/Nvx7QOvUyMnZc8MVfKk2xETnj" target="_blank"><img src="https://asciinema.org/a/Nvx7QOvUyMnZc8MVfKk2xETnj.svg" /></a>
    <embed>
 
-Hello, World!
-=============
+Getting Started
+===============
 
 Put `makeit` file in the directory, `makeit` should be executable, completion support is installed (otherwise 
 use `./makeit`).
@@ -19,6 +19,7 @@ Type in bash shell:
 
 .. code-block:: bash
 
+  $ wget https://raw.githubusercontent.com/ilya-bystrov/makeit/master/makeit
   $ makeit hello
   Hello, World!
   $ makeit bye
@@ -26,6 +27,10 @@ Type in bash shell:
 
 Creating `makeit` file
 ======================
+
+* Use the template: `https://raw.githubusercontent.com/ilya-bystrov/makeit/master/makeit`
+
+  Or
 
 * For every new `makeit` file you **must copy** bottom lines of `makeit` file (`while` loop),
 * Also I suggest to use `/usr/bin/env bash` shebang and `errexit`, `pipefail`, `nounset` bash options but it's 
