@@ -13,8 +13,8 @@ Bash file for defining multiple actions using bash-functions and launching them 
 Getting Started
 ===============
 
-Put `makeit` file in the directory, `makeit` should be executable, completion support is installed (otherwise 
-use `./makeit` instead of `makeit`).
+Put ``makeit`` file in the directory, ``makeit`` should be executable, completion support is installed 
+(otherwise use ``./makeit`` instead of ``makeit``).
 
 Bash completion support:
 
@@ -34,16 +34,16 @@ Demo:
   $ makeit bye
   bye-bye.
 
-Creating `makeit` file
+Creating ``makeit`` file
 ======================
 
-* Use the template: `https://raw.githubusercontent.com/ilya-bystrov/makeit/master/makeit`
+* Use the template: ``https://raw.githubusercontent.com/ilya-bystrov/makeit/master/makeit``
 
   Or
 
-* For every new `makeit` file you **must copy** bottom lines of `makeit` file (`while` loop),
-* Also I suggest to use `/usr/bin/env bash` shebang and `errexit`, `pipefail`, `nounset` bash options but it's 
-  not required.
+* For every new ``makeit`` file you **must copy** bottom lines of ``makeit`` file (``while`` loop),
+* Also I suggest to use ``/usr/bin/env bash`` shebang and ``errexit``, ``pipefail``, ``nounset`` bash options 
+  but it's not required.
 
 Example
 =======
@@ -51,8 +51,8 @@ Example
 docker-container-management
 ---------------------------
 
-You can find an example (requires `docker` installed) in `examples/docker-container-management/makeit`.
-You can run it with the following commands (suggest that alias is created overwise use `./makeit`)
+You can find an example (requires ``docker`` installed) in ``examples/docker-container-management/makeit``.
+You can run it with the following commands (suggest that alias is created overwise use ``./makeit``)
 
 .. code-block:: bash
 
@@ -65,14 +65,15 @@ You can run it with the following commands (suggest that alias is created overwi
 Motivation
 ==========
 
-I've regularly found myself creating bash scripts with names like `build`, `run`, `clear` for every project.
+I've regularly found myself creating bash scripts with names like ``build``, ``run``, ``clear`` for every 
+project.
 Typically, these scripts should share some variables and I'd had to duplicate them or use other techniques 
 (env variables, source common script).
 I wasn't satisfied with such approaches.
 
-Also, I used `Makefile`-s. Specifically, I liked the completion feature.
-But `Makefile` has its own features, that were not convenient for me: Makefile syntax, every line is executed 
-separately, additional configuration, etc.
+Also, I used ``Makefile``-s. Specifically, I liked the completion feature.
+But ``Makefile`` has its own features, that were not convenient for me: Makefile syntax, every line is 
+executed separately, additional configuration, etc.
 
 For my purposes, I wanted to have a single file that contains bash scenarios with the ability to share common variables and functions, and with autocomplete feature in order to launch them easily.
 
