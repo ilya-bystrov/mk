@@ -84,4 +84,4 @@ Feel free to suggest `improvements <https://github.com/ilya-bystrov/makeit/issue
 Motivation
 ==========
 
-Motivation is covered in `my post <https://ilya-bystrov.github.io/posts/makeit/makeit%3D.html>`_
+Motivation is covered in `my post <https://ilya-bystrov.github.io/posts/makeit/makeit%3D.html#motivation>`_
