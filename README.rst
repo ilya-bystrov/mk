@@ -52,9 +52,12 @@ Concept
 
 * The key idea is iterating through arguments that corresponds to function names and invoking this functions
 * Use the `template <https://raw.githubusercontent.com/ilya-bystrov/makeit/master/makeit>`_
+
   + By default
+  
     - ``/usr/bin/env bash`` shebang
     - ``errexit``, ``pipefail``, ``nounset`` bash options
+    
 * Or build your own
 
 Example
