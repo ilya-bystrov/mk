@@ -1,8 +1,19 @@
-######
-makeit
-######
+##################################
+Makeit: Bash-based Automation Tool
+##################################
 
-Bash file for defining multiple actions using bash-functions and launching them (with autocompletion support).
+Features
+========
+
+* Bash as a language
+* Shared context
+* Target is defined as a bash function
+* Targets can depends on others
+* Multiple targets can be invoked
+* Autocompletion support
+
+Demo
+====
 
 .. raw:: html
 
@@ -13,10 +24,7 @@ Bash file for defining multiple actions using bash-functions and launching them 
 Getting Started
 ===============
 
-Put ``makeit`` file in the directory, ``makeit`` should be executable, completion support is installed 
-(otherwise use ``./makeit`` instead of ``makeit``).
-
-Bash completion support:
+1. Enable autocompletion 
 
 .. code-block:: bash
 
@@ -24,26 +32,30 @@ Bash completion support:
   $ wget https://raw.githubusercontent.com/ilya-bystrov/makeit/master/completions/makeit_alias -O - >> ~/.bash_completion
 
 
-Demo: 
+2. Use template
 
 .. code-block:: bash
 
   $ wget https://raw.githubusercontent.com/ilya-bystrov/makeit/master/makeit
+  $ chmod u+x makeit
+  $ makeit <Tab>
+  bye hello
   $ makeit hello
   Hello, World!
   $ makeit bye
   bye-bye.
 
-Creating ``makeit`` file
-======================
+3. Customize ``makeit`` for your own needs
 
-* Use the template: ``https://raw.githubusercontent.com/ilya-bystrov/makeit/master/makeit``
+Concept
+=======
 
-  Or
-
-* For every new ``makeit`` file you **must copy** bottom lines of ``makeit`` file (``while`` loop),
-* Also I suggest to use ``/usr/bin/env bash`` shebang and ``errexit``, ``pipefail``, ``nounset`` bash options 
-  but it's not required.
+* The key idea is iterating through arguments that corresponds to function names and invoking this functions
+* Use the `template <https://raw.githubusercontent.com/ilya-bystrov/makeit/master/makeit>`_
+  + By default
+    - ``/usr/bin/env bash`` shebang
+    - ``errexit``, ``pipefail``, ``nounset`` bash options
+* Or build your own
 
 Example
 =======
@@ -51,33 +63,22 @@ Example
 docker-container-management
 ---------------------------
 
-You can find an example (requires ``docker`` installed) in ``examples/docker-container-management/makeit``.
-You can run it with the following commands (suggest that alias is created overwise use ``./makeit``)
+Requires ``docker`` installed
 
 .. code-block:: bash
 
-  $ makeit build  # build simple docker image
-  $ makeit run    # run container 
-  $ makeit rm     # remove container 
-  $ makeit rmi    # remove image 
+  $ cd makeit/examples/docker-container-management/makeit
+  $ makeit build  # build 'someimage' docker image based on 'busybox'
+  $ makeit run    # run 'someimage' image inside 'somecontainer' container 
+  $ makeit rm     # remove 'somecontainer' container 
+  $ makeit rmi    # remove 'someimage' image 
 
+Improvements
+============
+
+Feel free to suggest `improvements <https://github.com/ilya-bystrov/makeit/issues>`_
 
 Motivation
 ==========
 
-I've regularly found myself creating bash scripts with names like ``build``, ``run``, ``clear`` for every 
-project.
-Typically, these scripts should share some variables and I'd had to duplicate them or use other techniques 
-(env variables, source common script).
-I wasn't satisfied with such approaches.
-
-Also, I used ``Makefile``-s. Specifically, I liked the completion feature.
-But ``Makefile`` has its own features, that were not convenient for me: Makefile syntax, every line is 
-executed separately, additional configuration, etc.
-
-For my purposes, I wanted to have a single file that contains bash scenarios with the ability to share common variables and functions, and with autocomplete feature in order to launch them easily.
-
-Thanks
-======
-
-Feel free to provide improvements, examples, etc.
+Motivation is covered in `post <https://ilya-bystrov.github.io/posts/makeit/makeit%3D.html>`_
