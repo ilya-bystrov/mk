@@ -8,7 +8,7 @@ Features
 * Bash as a language
 * Shared context
 * Target is defined as a bash function
-* Targets can depends on others
+* Targets can depend on others
 * Multiple targets can be invoked
 * Autocompletion support
 
