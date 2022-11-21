@@ -5,6 +5,7 @@ shopt -s -o pipefail
 shopt -s -o nounset
 shopt -s inherit_errexit
 
+
 hello() {
   echo 'Hello, World!'
 }
