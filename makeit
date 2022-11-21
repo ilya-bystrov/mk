@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-set -o errexit
-set -o pipefail
-set -o nounset
+shopt -s -o errexit
+shopt -s -o pipefail
+shopt -s -o nounset
+shopt -s inherit_errexit
 
 hello() {
   echo 'Hello, World!'
