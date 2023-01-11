@@ -14,4 +14,4 @@ _mk_completions()
   COMPREPLY=( $(echo ${all_opts[@]} ${words[@]:1} | tr ' ' '\n' | grep -v "^$cur$" | grep "^$cur" ) ) 
 }
 
-complete -F _mk mk
+complete -F _mk_completions mk
