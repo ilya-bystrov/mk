@@ -1,5 +1,5 @@
 # completions: depends on _init_completion from bash-completion package
-_makeit_completions()
+_mk_completions()
 {
   # Based on /usr/share/bash-completion/completions/make
   local cur prev words cword split
@@ -14,4 +14,4 @@ _makeit_completions()
   COMPREPLY=( $(echo ${all_opts[@]} ${words[@]:1} | tr ' ' '\n' | grep -v "^$cur$" | grep "^$cur" ) ) 
 }
 
-complete -F _makeit_completions makeit
+complete -F _mk mk

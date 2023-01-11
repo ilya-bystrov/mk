@@ -1,6 +1,6 @@
-##################################
-Makeit: Bash-based Automation Tool
-##################################
+##############################
+mk: Bash-based Automation Tool
+##############################
 
 Features
 ========
@@ -15,6 +15,8 @@ Features
 Demo
 ====
 
+*demo is outdated, acutal name is ``mk``, not ``makeit``*
+
 .. raw:: html
 
    <embed>
@@ -28,30 +30,30 @@ Getting Started
 
 .. code-block:: bash
 
-  $ wget https://raw.githubusercontent.com/ilya-bystrov/makeit/master/completions/makeit_completions -O - >> ~/.bash_completion
-  $ wget https://raw.githubusercontent.com/ilya-bystrov/makeit/master/completions/makeit_alias -O - >> ~/.bash_completion
+  $ wget https://raw.githubusercontent.com/ilya-bystrov/mk/master/completions/mk_completions -O - >> ~/.bash_completion
+  $ wget https://raw.githubusercontent.com/ilya-bystrov/mk/master/completions/mk_alias -O - >> ~/.bash_completion
 
 
 2. Use template
 
 .. code-block:: bash
 
-  $ wget https://raw.githubusercontent.com/ilya-bystrov/makeit/master/makeit
-  $ chmod u+x makeit
-  $ makeit <Tab>
+  $ wget https://raw.githubusercontent.com/ilya-bystrov/mk/master/mk
+  $ chmod u+x mk
+  $ mk <Tab>
   bye hello
-  $ makeit hello
+  $ mk hello
   Hello, World!
-  $ makeit bye
+  $ mk bye
   bye-bye.
 
-3. Customize ``makeit`` for your own needs
+3. Customize ``mk`` for your own needs
 
 Concept
 =======
 
 * The key idea is iterating through arguments that corresponds to function names and invoking this functions
-* Use the `template <https://raw.githubusercontent.com/ilya-bystrov/makeit/master/makeit>`_
+* Use the `template <https://raw.githubusercontent.com/ilya-bystrov/mk/master/mk>`_
 
   + By default
   
@@ -70,16 +72,16 @@ Requires ``docker`` installed
 
 .. code-block:: bash
 
-  $ cd makeit/examples/docker-container-management/makeit
-  $ makeit build  # build 'someimage' docker image based on 'busybox'
-  $ makeit run    # run 'someimage' image inside 'somecontainer' container 
-  $ makeit rm     # remove 'somecontainer' container 
-  $ makeit rmi    # remove 'someimage' image 
+  $ cd mk/examples/docker-container-management/mk
+  $ mk build  # build 'someimage' docker image based on 'busybox'
+  $ mk run    # run 'someimage' image inside 'somecontainer' container 
+  $ mk rm     # remove 'somecontainer' container 
+  $ mk rmi    # remove 'someimage' image 
 
 Improvements
 ============
 
-Feel free to suggest `improvements <https://github.com/ilya-bystrov/makeit/issues>`_
+Feel free to suggest `improvements <https://github.com/ilya-bystrov/mk/issues>`_
 
 Motivation
 ==========
