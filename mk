@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+########################################
+##   mk: Bash-based Automation Tool   ##
+## https://github.com/ilya-bystrov/mk ##
+########################################
+
 shopt -s -o errexit
 shopt -s -o pipefail
 shopt -s -o nounset
